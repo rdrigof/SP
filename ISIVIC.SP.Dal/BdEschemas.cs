@@ -35,7 +35,7 @@ namespace ISIVIC.SP.Dal
         }
         public DataTable listarColumnas(string tabla)
         {
-            string query = "SELECT COLUMN_NAME, DATA_TYPE,COLUMN_KEY FROM INFORMATION_SCHEMA.columns WHERE table_name = '" + tabla + "'";
+            string query = "SELECT COLUMN_NAME, DATA_TYPE,COLUMN_KEY,COLUMN_TYPE FROM INFORMATION_SCHEMA.columns WHERE table_name = '" + tabla + "'";
             MySqlCommand cmd = new MySqlCommand(query);
             cmd.CommandType = System.Data.CommandType.Text;
             NCH.Fwk.Bd.MySql.Coneccion = NCH.Fwk.Configuration.SettingsServices.MysqlConect;
