@@ -24,7 +24,10 @@ namespace ISIVIC.SP.Dal.Test
                     dtColumnas = db.listarColumnas(tabla["table_name"].ToString());
 
                     TableToClass.GenerarClase(bd["Database"].ToString(), tabla["table_name"].ToString(), dtColumnas);
-                    TableToStoredProdureMysql.GenerarSp(bd["Database"].ToString(), tabla["table_name"].ToString(), dtColumnas);
+                    TableToStoredProdureMysql.BdName = bd["Database"].ToString();
+                    TableToStoredProdureMysql.Tabla = tabla["table_name"].ToString();
+                    TableToStoredProdureMysql.DtColumnas = dtColumnas;
+                    TableToStoredProdureMysql.GenerarSp();
                 }
             }
         }

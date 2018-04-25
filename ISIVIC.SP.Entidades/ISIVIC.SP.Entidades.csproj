@@ -40,6 +40,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Basesistema\Correosnotifica.cs" />
+    <Compile Include="Basesistema\Empresas.cs" />
+    <Compile Include="Basesistema\Logins.cs" />
+    <Compile Include="Basesistema\Menus.cs" />
+    <Compile Include="Basesistema\Menusub.cs" />
+    <Compile Include="Basesistema\Menususuarios.cs" />
+    <Compile Include="Basesistema\Parametros.cs" />
+    <Compile Include="Basesistema\Parametrosdetalle.cs" />
+    <Compile Include="Basesistema\Sucursales.cs" />
+    <Compile Include="Basesistema\Vmenusub.cs" />
+    <Compile Include="Basesistema\Vmenususuarios.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

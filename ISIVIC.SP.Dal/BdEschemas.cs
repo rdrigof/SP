@@ -16,8 +16,8 @@ namespace ISIVIC.SP.Dal
         {
             MySqlCommand cmd = new MySqlCommand();
             cmd.CommandText = "SHOW DATABASES;";
-            NCH.Fwk.Bd.MySql.Coneccion = NCH.Fwk.Configuration.SettingsServices.MysqlConectNotBd;
             DataTable dt = new DataTable();
+            NCH.Fwk.Bd.MySql.Coneccion = NCH.Fwk.Configuration.SettingsServices.MysqlConectNotBd;
             dt = NCH.Fwk.Bd.MySql.executar(cmd);
 
             return dt;
@@ -27,8 +27,8 @@ namespace ISIVIC.SP.Dal
             string query = "SELECT table_name FROM INFORMATION_SCHEMA.Tables WHERE table_schema = '" + baseDatos + "' ";
             MySqlCommand cmd = new MySqlCommand(query);
             cmd.CommandType = System.Data.CommandType.Text;
-            NCH.Fwk.Bd.MySql.Coneccion = NCH.Fwk.Configuration.SettingsServices.MysqlConect;
             DataTable dt = new DataTable();
+            NCH.Fwk.Bd.MySql.Coneccion = NCH.Fwk.Configuration.SettingsServices.MysqlConectNotBd;
             dt = NCH.Fwk.Bd.MySql.executar(cmd);
 
             return dt;
@@ -38,8 +38,8 @@ namespace ISIVIC.SP.Dal
             string query = "SELECT COLUMN_NAME, DATA_TYPE,COLUMN_KEY,COLUMN_TYPE FROM INFORMATION_SCHEMA.columns WHERE table_name = '" + tabla + "'";
             MySqlCommand cmd = new MySqlCommand(query);
             cmd.CommandType = System.Data.CommandType.Text;
-            NCH.Fwk.Bd.MySql.Coneccion = NCH.Fwk.Configuration.SettingsServices.MysqlConect;
             DataTable dt = new DataTable();
+            NCH.Fwk.Bd.MySql.Coneccion = NCH.Fwk.Configuration.SettingsServices.MysqlConectNotBd;
             dt = NCH.Fwk.Bd.MySql.executar(cmd);
 
             return dt;

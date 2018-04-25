@@ -52,6 +52,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Basesistema\SP_CONS_CORREOSNOTIFICA.cs" />
+    <Compile Include="Basesistema\SP_CONS_EMPRESAS.cs" />
+    <Compile Include="Basesistema\SP_CONS_LOGINS.cs" />
+    <Compile Include="Basesistema\SP_CONS_MENUS.cs" />
+    <Compile Include="Basesistema\SP_CONS_MENUSUB.cs" />
+    <Compile Include="Basesistema\SP_CONS_MENUSUSUARIOS.cs" />
+    <Compile Include="Basesistema\SP_CONS_PARAMETROS.cs" />
+    <Compile Include="Basesistema\SP_CONS_PARAMETROSDETALLE.cs" />
+    <Compile Include="Basesistema\SP_CONS_SUCURSALES.cs" />
+    <Compile Include="Basesistema\SP_CONS_VMENUSUB.cs" />
+    <Compile Include="Basesistema\SP_CONS_VMENUSUSUARIOS.cs" />
+    <Compile Include="Basesistema\SP_MANT_CORREOSNOTIFICA.cs" />
+    <Compile Include="Basesistema\SP_MANT_EMPRESAS.cs" />
+    <Compile Include="Basesistema\SP_MANT_LOGINS.cs" />
+    <Compile Include="Basesistema\SP_MANT_MENUS.cs" />
+    <Compile Include="Basesistema\SP_MANT_MENUSUB.cs" />
+    <Compile Include="Basesistema\SP_MANT_MENUSUSUARIOS.cs" />
+    <Compile Include="Basesistema\SP_MANT_PARAMETROS.cs" />
+    <Compile Include="Basesistema\SP_MANT_PARAMETROSDETALLE.cs" />
+    <Compile Include="Basesistema\SP_MANT_SUCURSALES.cs" />
+    <Compile Include="Basesistema\SP_MANT_VMENUSUB.cs" />
+    <Compile Include="Basesistema\SP_MANT_VMENUSUSUARIOS.cs" />
     <Compile Include="BdEschemas.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -67,6 +89,18 @@
       <Project>{0366CBB9-4FC6-4BB8-BA94-0CB8AC68BB6F}</Project>
       <Name>NCH.Fwk.Configuration</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\NCH.Fwk\NCH.Fwk.Cryptography\NCH.Fwk.Cryptography.csproj">
+      <Project>{8249C676-E100-4F2A-B0EF-31F861DA1D62}</Project>
+      <Name>NCH.Fwk.Cryptography</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\NCH.Fwk\NCH.Fwk.Helpers\NCH.Fwk.Helpers.csproj">
+      <Project>{0c6343aa-ff93-4437-9317-f71688e35494}</Project>
+      <Name>NCH.Fwk.Helpers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ISIVIC.SP.Entidades\ISIVIC.SP.Entidades.csproj">
+      <Project>{E95DA32A-5564-4925-9417-98345D0C7FA6}</Project>
+      <Name>ISIVIC.SP.Entidades</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="docs\MySqlCommand.xml" />
@@ -81,5 +115,6 @@
     <Content Include="docs\MySqlParameterCollection.xml" />
     <Content Include="docs\MySqlTransaction.xml" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
