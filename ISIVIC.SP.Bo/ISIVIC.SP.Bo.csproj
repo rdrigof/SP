@@ -40,10 +40,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Basesistema\SP_CONS_MENUS_USUARIOS_NO_ASIGNADOS_BO.cs" />
+    <Compile Include="Basesistema\SP_CONS_MENUS_USUARIOS_ASIGNADOS_BO.cs" />
     <Compile Include="Basesistema\SP_CONS_LOGINS_BO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\NCH.Fwk\NCH.Fwk.Entities\NCH.Fwk.Entities.csproj">
+      <Project>{0BFD23AA-53A4-4C69-B20B-38B7699C32BB}</Project>
+      <Name>NCH.Fwk.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\NCH.Fwk\NCH.Fwk.Security\NCH.Fwk.Security.csproj">
+      <Project>{e2b054cf-c761-4a3a-9a2f-75ef0f577d79}</Project>
+      <Name>NCH.Fwk.Security</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ISIVIC.SP.Bo.Abstractions\ISIVIC.SP.Bo.Abstractions.csproj">
+      <Project>{185159a3-fd6d-43e7-9bfb-aab6401baf14}</Project>
+      <Name>ISIVIC.SP.Bo.Abstractions</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ISIVIC.SP.Dal\ISIVIC.SP.Dal.csproj">
       <Project>{ed19ce67-6d42-44d0-96d7-6ae658e8352e}</Project>
       <Name>ISIVIC.SP.Dal</Name>
@@ -52,6 +66,9 @@
       <Project>{e95da32a-5564-4925-9417-98345d0c7fa6}</Project>
       <Name>ISIVIC.SP.Entidades</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

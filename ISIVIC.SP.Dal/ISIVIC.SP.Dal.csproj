@@ -54,9 +54,10 @@
   <ItemGroup>
     <Compile Include="Basesistema\SP_CONS_CORREOSNOTIFICA.cs" />
     <Compile Include="Basesistema\SP_CONS_EMPRESAS.cs" />
-    <Compile Include="Basesistema\SP_CONS_LOGINS.cs" />
     <Compile Include="Basesistema\SP_CONS_MENUS.cs" />
     <Compile Include="Basesistema\SP_CONS_MENUSUB.cs" />
+    <Compile Include="Basesistema\SP_CONS_MENUS_USUARIOS_NO_ASIGNADOS.cs" />
+    <Compile Include="Basesistema\SP_CONS_MENUS_USUARIOS_ASIGNADOS.cs" />
     <Compile Include="Basesistema\SP_CONS_MENUSUSUARIOS.cs" />
     <Compile Include="Basesistema\SP_CONS_PARAMETROS.cs" />
     <Compile Include="Basesistema\SP_CONS_PARAMETROSDETALLE.cs" />

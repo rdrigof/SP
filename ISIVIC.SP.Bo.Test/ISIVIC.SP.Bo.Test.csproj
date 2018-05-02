@@ -52,11 +52,16 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\NCH.Fwk\NCH.Fwk.Entities\NCH.Fwk.Entities.csproj">
+      <Project>{0BFD23AA-53A4-4C69-B20B-38B7699C32BB}</Project>
+      <Name>NCH.Fwk.Entities</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ISIVIC.SP.Bo\ISIVIC.SP.Bo.csproj">
-      <Project>{46439D13-D23A-418E-812C-02C6B673C12F}</Project>
+      <Project>{46439d13-d23a-418e-812c-02c6b673c12f}</Project>
       <Name>ISIVIC.SP.Bo</Name>
     </ProjectReference>
     <ProjectReference Include="..\ISIVIC.SP.Entidades\ISIVIC.SP.Entidades.csproj">

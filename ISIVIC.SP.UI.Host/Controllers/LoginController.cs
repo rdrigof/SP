@@ -6,9 +6,9 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Description;
-using Entidades.Basesistema;
 using ISIVIC.SP.Bo.Basesistema;
 using ISIVIC.SP.UI.Host.Models;
+using NCH.Fwk.Entities;
 using Newtonsoft.Json;
 
 namespace ISIVIC.SP.UI.Host.Controllers
@@ -24,9 +24,11 @@ namespace ISIVIC.SP.UI.Host.Controllers
             login.login = request.Login;
             login.contraseña = request.Password;
 
+            var model = JsonConvert.SerializeObject(SP_CONS_LOGINS_BO.get_Logins(login), Formatting.Indented);
+
             return new HttpResponseMessage(System.Net.HttpStatusCode.OK)
             {
-                Content = new StringContent(JsonConvert.SerializeObject(SP_CONS_LOGINS_BO.get_Logins(login), Formatting.Indented))
+                Content = new StringContent(model)
             };
         }
     }

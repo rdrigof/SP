@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using Entidades.Basesistema;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NCH.Fwk.Bd;
 
@@ -30,6 +31,13 @@ namespace ISIVIC.SP.Dal.Test
                     TableToStoredProdureMysql.GenerarSp();
                 }
             }
+        }
+
+        [TestMethod]
+        public void TestMethod2()
+        {
+            ISIVIC.SP.Dal.basesistema.SP_CONS_MENUS_USUARIOS_ASIGNADOS dal = new ISIVIC.SP.Dal.basesistema.SP_CONS_MENUS_USUARIOS_ASIGNADOS();
+            dal.get_Menususuarios("rsoto");
         }
     }
 }

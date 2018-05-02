@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E95DA32A-5564-4925-9417-98345D0C7FA6}</ProjectGuid>
+    <ProjectGuid>{185159A3-FD6D-43E7-9BFB-AAB6401BAF14}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ISIVIC.SP.Entidades</RootNamespace>
-    <AssemblyName>ISIVIC.SP.Entidades</AssemblyName>
+    <RootNamespace>ISIVIC.SP.Bo.Abstractions</RootNamespace>
+    <AssemblyName>ISIVIC.SP.Bo.Abstractions</AssemblyName>
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -40,19 +40,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Basesistema\Correosnotifica.cs" />
-    <Compile Include="Basesistema\Empresas.cs" />
-    <Compile Include="Basesistema\Logins.cs" />
-    <Compile Include="Basesistema\Menus.cs" />
-    <Compile Include="Basesistema\Menus_usuarios.cs" />
-    <Compile Include="Basesistema\Menusub.cs" />
-    <Compile Include="Basesistema\Menususuarios.cs" />
-    <Compile Include="Basesistema\Parametros.cs" />
-    <Compile Include="Basesistema\Parametrosdetalle.cs" />
-    <Compile Include="Basesistema\Sucursales.cs" />
-    <Compile Include="Basesistema\Vmenusub.cs" />
-    <Compile Include="Basesistema\Vmenususuarios.cs" />
+    <Compile Include="ISP_CONS_MENUS_USUARIOS_ASIGNADOS_BO.cs" />
+    <Compile Include="ISP_CONS_MENUS_USUARIOS_NO_ASIGNADOS_BO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ISIVIC.SP.Entidades\ISIVIC.SP.Entidades.csproj">
+      <Project>{E95DA32A-5564-4925-9417-98345D0C7FA6}</Project>
+      <Name>ISIVIC.SP.Entidades</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
