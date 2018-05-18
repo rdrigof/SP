@@ -33,8 +33,8 @@ namespace ISIVIC.SP.Dal.basesistema
 					cmd.Parameters.AddWithValue("@in_estado",vmenusub.estado);
 					cmd.Parameters.AddWithValue("@in_prioridad",vmenusub.prioridad);
 					vmenusubResponse.Result = NCH.Fwk.Bd.MySql.executar(cmd).ToList<Vmenusub>();
-					vmenusubResponse.ErrorCode = vmenusubResponse.Result.First().ErrorCode;
-					vmenusubResponse.ErrorDescription = vmenusubResponse.Result.First().ErrorDescription;
+					vmenusubResponse.ErrorCode = NCH.Fwk.Bd.MySql.ErrorCode;
+					vmenusubResponse.ErrorDescription = NCH.Fwk.Bd.MySql.ErrorDescription;
 					}
 					catch (Exception ex)
 					{

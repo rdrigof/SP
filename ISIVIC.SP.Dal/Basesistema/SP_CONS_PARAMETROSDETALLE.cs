@@ -29,8 +29,8 @@ namespace ISIVIC.SP.Dal.basesistema
 					cmd.Parameters.AddWithValue("@in_loginmodifica",parametrosdetalle.loginmodifica);
 					cmd.Parameters.AddWithValue("@in_fhmodifica",parametrosdetalle.fhmodifica);
 					parametrosdetalleResponse.Result = NCH.Fwk.Bd.MySql.executar(cmd).ToList<Parametrosdetalle>();
-					parametrosdetalleResponse.ErrorCode = parametrosdetalleResponse.Result.First().ErrorCode;
-					parametrosdetalleResponse.ErrorDescription = parametrosdetalleResponse.Result.First().ErrorDescription;
+					parametrosdetalleResponse.ErrorCode = NCH.Fwk.Bd.MySql.ErrorCode;
+					parametrosdetalleResponse.ErrorDescription = NCH.Fwk.Bd.MySql.ErrorDescription;
 					}
 					catch (Exception ex)
 					{

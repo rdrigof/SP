@@ -28,8 +28,8 @@ namespace ISIVIC.SP.Dal.basesistema
 					cmd.Parameters.AddWithValue("@in_variablepost",parametros.variablepost);
 					cmd.Parameters.AddWithValue("@in_navigateurl",parametros.navigateurl);
 					parametrosResponse.Result = NCH.Fwk.Bd.MySql.executar(cmd).ToList<Parametros>();
-					parametrosResponse.ErrorCode = parametrosResponse.Result.First().ErrorCode;
-					parametrosResponse.ErrorDescription = parametrosResponse.Result.First().ErrorDescription;
+					parametrosResponse.ErrorCode = NCH.Fwk.Bd.MySql.ErrorCode;
+					parametrosResponse.ErrorDescription = NCH.Fwk.Bd.MySql.ErrorDescription;
 					}
 					catch (Exception ex)
 					{

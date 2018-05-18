@@ -9,14 +9,8 @@ namespace Entidades.Basesistema
 	public class Logins
 	{
 		public Logins(){ }
-		public string ErrorCode
-		{
-			 get; set; 
-		}
-		public string ErrorDescription
-		{
-			 get; set; 
-		}
+
+
 		public int idlogin
 		{
 			 get; set; 

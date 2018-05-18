@@ -33,8 +33,8 @@ namespace ISIVIC.SP.Dal.basesistema
 					cmd.Parameters.AddWithValue("@in_fhmodifica",correosnotifica.fhmodifica);
 					cmd.Parameters.AddWithValue("@in_loginmodifica",correosnotifica.loginmodifica);
 					correosnotificaResponse.Result = NCH.Fwk.Bd.MySql.executar(cmd).ToList<Correosnotifica>();
-					correosnotificaResponse.ErrorCode = correosnotificaResponse.Result.First().ErrorCode;
-					correosnotificaResponse.ErrorDescription = correosnotificaResponse.Result.First().ErrorDescription;
+					correosnotificaResponse.ErrorCode = NCH.Fwk.Bd.MySql.ErrorCode;
+					correosnotificaResponse.ErrorDescription = NCH.Fwk.Bd.MySql.ErrorDescription;
 					}
 					catch (Exception ex)
 					{

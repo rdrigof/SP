@@ -11,14 +11,6 @@ namespace Entidades.Basesistema
 		public Empresas(){ }
 
 
-		public string ErrorCode
-		{
-			 get; set; 
-		}
-		public string ErrorDescription
-		{
-			 get; set; 
-		}
 		public int rutempresa
 		{
 			 get; set; 

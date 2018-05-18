@@ -30,8 +30,8 @@ namespace ISIVIC.SP.Dal.basesistema
 					cmd.Parameters.AddWithValue("@in_estado",logins.estado);
 					cmd.Parameters.AddWithValue("@in_email",logins.email);
 					loginsResponse.Result = NCH.Fwk.Bd.MySql.executar(cmd).ToList<Logins>();
-					loginsResponse.ErrorCode = loginsResponse.Result.First().ErrorCode;
-					loginsResponse.ErrorDescription = loginsResponse.Result.First().ErrorDescription;
+					loginsResponse.ErrorCode = NCH.Fwk.Bd.MySql.ErrorCode;
+					loginsResponse.ErrorDescription = NCH.Fwk.Bd.MySql.ErrorDescription;
 					}
 					catch (Exception ex)
 					{

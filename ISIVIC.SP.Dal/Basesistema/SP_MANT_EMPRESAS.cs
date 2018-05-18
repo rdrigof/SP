@@ -43,8 +43,8 @@ namespace ISIVIC.SP.Dal.basesistema
 					cmd.Parameters.AddWithValue("@in_comunas_ciudades_idciudad",empresas.comunas_ciudades_idciudad);
 					cmd.Parameters.AddWithValue("@in_comunas_idcomunas",empresas.comunas_idcomunas);
 					empresasResponse.Result = NCH.Fwk.Bd.MySql.executar(cmd).ToList<Empresas>();
-					empresasResponse.ErrorCode = empresasResponse.Result.First().ErrorCode;
-					empresasResponse.ErrorDescription = empresasResponse.Result.First().ErrorDescription;
+					empresasResponse.ErrorCode = NCH.Fwk.Bd.MySql.ErrorCode;
+					empresasResponse.ErrorDescription = NCH.Fwk.Bd.MySql.ErrorDescription;
 					}
 					catch (Exception ex)
 					{

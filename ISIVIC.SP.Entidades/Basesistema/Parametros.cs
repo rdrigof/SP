@@ -11,14 +11,6 @@ namespace Entidades.Basesistema
 		public Parametros(){ }
 
 
-		public string ErrorCode
-		{
-			 get; set; 
-		}
-		public string ErrorDescription
-		{
-			 get; set; 
-		}
 		public int idparametro
 		{
 			 get; set; 

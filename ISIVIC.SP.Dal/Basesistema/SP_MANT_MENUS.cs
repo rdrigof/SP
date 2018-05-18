@@ -27,8 +27,8 @@ namespace ISIVIC.SP.Dal.basesistema
 					cmd.Parameters.AddWithValue("@in_estado",menus.estado);
 					cmd.Parameters.AddWithValue("@in_prioridad",menus.prioridad);
 					menusResponse.Result = NCH.Fwk.Bd.MySql.executar(cmd).ToList<Menus>();
-					menusResponse.ErrorCode = menusResponse.Result.First().ErrorCode;
-					menusResponse.ErrorDescription = menusResponse.Result.First().ErrorDescription;
+					menusResponse.ErrorCode = NCH.Fwk.Bd.MySql.ErrorCode;
+					menusResponse.ErrorDescription = NCH.Fwk.Bd.MySql.ErrorDescription;
 					}
 					catch (Exception ex)
 					{

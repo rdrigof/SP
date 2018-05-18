@@ -31,8 +31,8 @@ namespace ISIVIC.SP.Dal.basesistema
 					cmd.Parameters.AddWithValue("@in_estado",sucursales.estado);
 					cmd.Parameters.AddWithValue("@in_ciudades_idciudad",sucursales.ciudades_idciudad);
 					sucursalesResponse.Result = NCH.Fwk.Bd.MySql.executar(cmd).ToList<Sucursales>();
-					sucursalesResponse.ErrorCode = sucursalesResponse.Result.First().ErrorCode;
-					sucursalesResponse.ErrorDescription = sucursalesResponse.Result.First().ErrorDescription;
+					sucursalesResponse.ErrorCode = NCH.Fwk.Bd.MySql.ErrorCode;
+					sucursalesResponse.ErrorDescription = NCH.Fwk.Bd.MySql.ErrorDescription;
 					}
 					catch (Exception ex)
 					{

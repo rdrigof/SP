@@ -11,14 +11,6 @@ namespace Entidades.Basesistema
 		public Menus(){ }
 
 
-		public string ErrorCode
-		{
-			 get; set; 
-		}
-		public string ErrorDescription
-		{
-			 get; set; 
-		}
 		public int idmenus
 		{
 			 get; set; 

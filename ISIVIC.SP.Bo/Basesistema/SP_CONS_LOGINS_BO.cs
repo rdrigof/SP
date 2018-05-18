@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ISIVIC.SP.Dal.basesistema;
-using Lai.Fwk.Security;
+using NCH.Fwk.Security;
 
 namespace ISIVIC.SP.Bo.Basesistema
 {
@@ -13,7 +13,6 @@ namespace ISIVIC.SP.Bo.Basesistema
         public static NCH.Fwk.Entities.LoginsResponse get_Logins(NCH.Fwk.Entities.Logins login)
         {
             NCH.Fwk.Entities.LoginsResponse loginsResponse = new NCH.Fwk.Entities.LoginsResponse();
-            //SP_CONS_LOGINS loginDal = new SP_CONS_LOGINS();
 
             LoginService loginService = new LoginService();
 

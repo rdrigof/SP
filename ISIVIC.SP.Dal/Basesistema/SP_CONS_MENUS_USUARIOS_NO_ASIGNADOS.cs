@@ -23,8 +23,8 @@ namespace ISIVIC.SP.Dal.basesistema
 					cmd.CommandText = "SP_CONS_MENUS_USUARIOS_NO_ASIGNADOS";
 					cmd.Parameters.AddWithValue("@in_login", login);
 					menususuariosResponse.Result = NCH.Fwk.Bd.MySql.executar(cmd).ToList<Menus_usuarios>();
-					menususuariosResponse.ErrorCode = menususuariosResponse.Result.First().ErrorCode;
-					menususuariosResponse.ErrorDescription = menususuariosResponse.Result.First().ErrorDescription;
+					menususuariosResponse.ErrorCode = NCH.Fwk.Bd.MySql.ErrorCode;
+					menususuariosResponse.ErrorDescription = NCH.Fwk.Bd.MySql.ErrorDescription;
 				}
 				catch (Exception ex)
 				{

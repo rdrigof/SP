@@ -28,8 +28,8 @@ namespace ISIVIC.SP.Dal.basesistema
 					cmd.Parameters.AddWithValue("@in_menus_idmenus",menusub.menus_idmenus);
 					cmd.Parameters.AddWithValue("@in_prioridadsub",menusub.prioridadsub);
 					menusubResponse.Result = NCH.Fwk.Bd.MySql.executar(cmd).ToList<Menusub>();
-					menusubResponse.ErrorCode = menusubResponse.Result.First().ErrorCode;
-					menusubResponse.ErrorDescription = menusubResponse.Result.First().ErrorDescription;
+					menusubResponse.ErrorCode = NCH.Fwk.Bd.MySql.ErrorCode;
+					menusubResponse.ErrorDescription = NCH.Fwk.Bd.MySql.ErrorDescription;
 					}
 					catch (Exception ex)
 					{

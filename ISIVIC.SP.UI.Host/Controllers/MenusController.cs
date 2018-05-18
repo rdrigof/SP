@@ -10,7 +10,7 @@ using Newtonsoft.Json;
 
 namespace ISIVIC.SP.UI.Host.Controllers
 {
-    [Lai.Fwk.Security.WebAPI.Authorize(Service = "MenusController", Program = "SP")]
+    [NCH.Fwk.Security.WebAPI.Authorize(Service = "MenusController", Program = "SP")]
     public class MenusController : ApiController
     {
         private readonly ISP_CONS_MENUS_USUARIOS_ASIGNADOS_BO _cons_MENUS_USUARIOS_ASIGNADOS_BO;
@@ -30,10 +30,7 @@ namespace ISIVIC.SP.UI.Host.Controllers
         [Route("api/basesistema/menuasignados"), HttpHead()]
         public async Task<HttpResponseMessage> get_Menususuarios_asignados(LoginMenuRequestModel request)
         {
-            Logins login = new Logins();
-            login.login = request.Login;
-
-            var model = JsonConvert.SerializeObject(this._cons_MENUS_USUARIOS_ASIGNADOS_BO.get_Menususuarios_asignados("rsoto"), Formatting.Indented);
+            var model = JsonConvert.SerializeObject(this._cons_MENUS_USUARIOS_ASIGNADOS_BO.get_Menususuarios_asignados(request.Login), Formatting.Indented);
 
             return new HttpResponseMessage(System.Net.HttpStatusCode.OK)
             {
@@ -46,10 +43,7 @@ namespace ISIVIC.SP.UI.Host.Controllers
         [Route("api/basesistema/menunoasignados"), HttpHead()]
         public async Task<HttpResponseMessage> get_Menususuarios_no_asignados(LoginMenuRequestModel request)
         {
-            Logins login = new Logins();
-            login.login = request.Login;
-
-            var model = JsonConvert.SerializeObject(this._cons_MENUS_USUARIOS_NO_ASIGNADOS_BO.get_Menususuarios_no_asignados("rsoto"), Formatting.Indented);
+            var model = JsonConvert.SerializeObject(this._cons_MENUS_USUARIOS_NO_ASIGNADOS_BO.get_Menususuarios_no_asignados(request.Login), Formatting.Indented);
 
             return new HttpResponseMessage(System.Net.HttpStatusCode.OK)
             {
